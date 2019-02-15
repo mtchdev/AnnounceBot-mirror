@@ -13,7 +13,7 @@ client.on('message', msg => {
         let args = msg.content.slice(9).trim().split(/ +/g);
 
         if(args[0] === 'remove'){
-            
+            //TODO
         }
 
         let channel = args[0];
