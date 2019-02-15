@@ -11,9 +11,13 @@ client.on('ready', () => {
 client.on('message', msg => {
     if(msg.content.startsWith("!announce")){
         let args = msg.content.slice(9).trim().split(/ +/g);
-
-        if(args[0] === 'remove'){
-            //TODO
+        if(msg.member.roles.has('342024437140553729') === false){
+            msg.reply('no permission.');
+            return;
+        }
+        if(args[0] === null|| args[1] === null){
+            msg.reply('incorrect syntax.');
+            return;
         }
 
         let channel = args[0];
